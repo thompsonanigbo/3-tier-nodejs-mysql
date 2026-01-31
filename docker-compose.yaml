@@ -13,7 +13,7 @@ services:
     networks:
       - app-network
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]  # Internal healthcheck using localhost
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-ppassword"]  # Internal healthcheck using localhost
       interval: 10s
       timeout: 5s
       retries: 3
